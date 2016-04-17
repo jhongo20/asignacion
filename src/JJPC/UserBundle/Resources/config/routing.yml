@@ -1,0 +1,60 @@
+jjpc_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JJPCUserBundle:Default:index }
+
+jjpc_user_index:
+    path:     /user/index
+    defaults: { _controller: JJPCUserBundle:User:index }
+    
+jjpc_user_add:
+    path:   /user/add
+    defaults: { _controller: JJPCUserBundle:User:add }
+    
+jjpc_user_create:
+    path:   /user/create
+    defaults: { _controller: JJPCUserBundle:User:create }
+    methods: POST
+    
+jjpc_user_edit:
+    path:   /user/edit/{id}
+    defaults:   { _controller: JJPCUserBundle:User:edit }
+
+jjpc_user_update:
+    path:   /user/update/{id}
+    defaults:   { _controller: JJPCUserBundle:User:update }
+    methods: [POST, PUT]
+    
+jjpc_user_view:
+    path:   /user/view/{id}
+    defaults:   { _controller:  JJPCUserBundle:User:view }
+    
+jjpc_user_delete:
+    path:   /user/delete/{id}
+    defaults:   { _controller:  JJPCUserBundle:User:delete }
+    methods: [POST, DELETE]
+    
+jjpc_user_redirect_add:
+    path:   /user/create
+    defaults: 
+        _controller:    JJPCUserBundle:User:add
+        path: /user/add
+        permanent: true
+
+jjpc_user_redirect_edit:
+    path:   /user/update/{id}
+    defaults: 
+        _controller:    JJPCUserBundle:User:update
+        path: /user/edit{id}
+        permanent: true
+    
+    
+    
+    
+    
+#jjpc_user_articles:
+#    path:    /user/articles/{page}
+#    defaults: { _controller: JJPCUserBundle:User:articles, page: 1 }
+#    requirements: 
+#        page: \d+    #expresion regular para solo permitir numeros
+    
+    
